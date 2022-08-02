@@ -1,0 +1,21 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "OpenClassrooms/Projet 3 , Dynamiser une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./sass/main.scss:./public/css/style.css --watch --style=expanded",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siergfied/Projet-3.git"
+  },
+  "author": "Axel Damart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siergfied/Projet-3/issues"
+  },
+  "homepage": "https://github.com/Siergfied/Projet-3#readme",
+  "browserslist": "last 4 versions"
+}
