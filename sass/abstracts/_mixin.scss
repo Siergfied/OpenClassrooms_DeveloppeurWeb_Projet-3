@@ -1,0 +1,9 @@
+@mixin box-padding{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+@mixin center-content{
+    align-items: center;
+    justify-content: center;
+}
