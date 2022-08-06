@@ -1,6 +1,21 @@
-@mixin box-padding{
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+@mixin padding-horizontal($value){
+    padding-left: $value;
+    padding-right: $value;
+}
+
+@mixin padding-vertical($value){
+    padding-top: $value;
+    padding-bottom: $value;
+}
+
+@mixin margin-horizontal($value){
+    margin-left: $value;
+    margin-right: $value;
+}
+
+@mixin margin-vertical($value){
+    margin-top: $value;
+    margin-bottom: $value;
 }
 
 @mixin center-content{

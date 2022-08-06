@@ -14,19 +14,21 @@
         </header>
     
         <main>
-            <section id="location">
+            <section class="section" id="location">
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Paris, Belleville</p>
             </section>
 
             <section id="explore">
-                <h2>Réservez le menu qui vous convient</h2>
+                <h2 class="section__title">Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <a href="#restaurants">Explorer nos restaurants</a>
+                <form>
+                    <button type="button" class="button button-primary">Explorer nos restaurants</button>
+                </form>
             </section>
 
-            <section id="fonctionnement">
-                <h2>Fonctionnement</h2>
+            <section class="section" id="fonctionnement">
+                <h2 class="section__title">Fonctionnement</h2>
                 <button>
                     <span>1</span>
                     <i class="fa-solid fa-mobile-screen-button"></i>
@@ -44,51 +46,59 @@
                 </button>
             </section>
 
-            <section id="restaurants">
-                <h2>Restaurants</h2>
-                <a class="card">
-                    <div class="card-image">
+            <section class="section" id="restaurants">
+                <h2 class="section__title">Restaurants</h2>
+                <a class="card" href="#">
+                    <div class="card__image">
                         <img src="./public/image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                         <span class="">Nouveau</span>
                     </div>
-                    <div class="card-text">
+                    <div class="card__text">
                         <h3>La palette du  goût</h3>
                         <p>Ménilmontant</p>
-                        <button class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        <form>
+                            <button class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        </form>
                     </div>
                 </a>
 
-                <a class="card">
-                    <div class="card-image">
+                <a class="card" href="#">
+                    <div class="card__image">
                         <img src="./public/image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                         <span>Nouveau</span>
                     </div>
-                    <div class="card-text">
+                    <div class="card__text">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
-                        <button class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        <form>
+                            <button class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        </form>
                     </div>
                 </a>
 
-                <a class="card">
-                    <div class="card-image">
+                <a class="card" href="#">
+                    <div class="card__image">
                         <img src="./public/image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
                     </div>
-                    <div class="card-text">
+                    <div class="card__text">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
-                        <button class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        <form>
+                            <button class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        </form>
                     </div>
                 </a>
 
-                <a class="card">
-                    <div class="card-image">
+                <a class="card" href="#">
+                    <div class="card__image">
                         <img src="./public/image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
                     </div>
-                    <div class="card-text">
+                    <div class="card__text">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
-                        <button class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        <form>
+                            <button type="submit" class="button-like"><i class="fa-solid fa-heart"></i></button>
+                        </form>
                     </div>
                 </a>
             </section>
