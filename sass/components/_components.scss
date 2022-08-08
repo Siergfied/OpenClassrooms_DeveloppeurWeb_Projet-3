@@ -1,11 +1,9 @@
 .section__title{
     display: flex;
-    @include margin-vertical(10px);
 }
 
 .button{
     display: flex;
-    border: none;
     font-size: 16px;
     box-shadow: 0px 5px 5px darken($primary-background-color, 30%);
     &:hover{
@@ -23,8 +21,10 @@
     @include padding-vertical(15px);
     background: linear-gradient(0deg,$primary-color,$secondary-color);
     border-radius: 30px;
-    a{
-        color: white;
-        text-decoration: none;
-    }
+}
+
+.card{
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px darken($primary-background-color, 15%);
 }

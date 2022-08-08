@@ -4,7 +4,7 @@ header,body{
     box-sizing: border-box;
 }
 
-header{
+.header{
     display: flex;
     width: 100%;
     position: fixed;
@@ -21,29 +21,45 @@ main{
 section{
     display: flex;
     flex-direction: column;
-    @include padding-horizontal(2.5%);
-    @include padding-vertical(30px);
+    @include padding-horizontal(5%);
+    @include padding-vertical(40px);
 }
 
-#location{
-    flex-direction: row;
-    @include center-content;
-    background-color: $secondary-background-color;
-    @include padding-vertical(15px);
-}
+.fonctionnement{
+    &__list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: listCounter;
+    }
+    &__step{
+        display: flex;
+        position: relative;
+        padding: 25px;
+        @include margin-vertical(8%);
+        align-items: center;
+        margin-left: 10px;
+        background-color: $secondary-background-color;
+        font-size: 16px;
+        font-weight: 500;
 
-#explore{
-    text-align: center;
-    background-color: darken($primary-background-color, 5%);
-    h2{
-        @include margin-horizontal(10%);
-    };
-}
+        &::before{
+            display: flex;
+            @include center-content;
+            counter-increment: listCounter 1;
+            content: counter(listCounter) " ";
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            color: $primary-background-color;
+            background-color: $primary-color;
+            position: absolute;
+            left: -10px;
+        };
 
-#fonctionnement{
-
-}
-
-#restaurants{
-
+        i{
+            margin-right: 25px;
+            font-size: 20px;
+        }
+    }
 }

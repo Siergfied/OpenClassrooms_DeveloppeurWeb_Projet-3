@@ -2,13 +2,17 @@
     font-family: 'Shrikhand', cursive;
 }
 
-h1, h2, h3, p, span, a, button{
+h1, h2, h3, p, span, a, button, ol, li{
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
 p{
     font-size: 18px;
+}
+
+a{
+    text-decoration: none;
 }
 
 h1{
@@ -18,4 +22,8 @@ h1{
 
 h2{
     font-weight: 700;
+}
+
+ol{
+    font-size: 14px;
 }
