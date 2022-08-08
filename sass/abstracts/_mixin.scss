@@ -19,6 +19,10 @@
 }
 
 @mixin center-content{
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+@mixin bottom-shadow{
+    
 }
