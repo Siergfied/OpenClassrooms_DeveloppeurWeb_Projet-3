@@ -1,0 +1,72 @@
+.location{
+    flex-direction: row;
+    background-color: $tertiary-background-color;
+    @include padding-vertical(15px);
+    @include center-content;
+    color: $secondary-text-color;
+    &__icon{
+        margin-right: 5%;
+        font-size: 18px;
+    }
+    &__text{
+        font-weight: 500;
+    }
+}
+
+.explore{
+    text-align: center;
+    background-color: $secondary-background-color;
+    h2{
+        @include margin-horizontal(10%);
+    };
+    p{
+        color: $secondary-text-color;
+    }
+}
+
+.fonctionnement{
+    &__list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: listCounter;
+        width: 100%;
+    }
+    &__step{
+        display: flex;
+        position: relative;
+        padding: 25px;
+        @include margin-vertical(8%);
+        align-items: center;
+        margin-left: 10px;
+        background-color: $secondary-background-color;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 20px;
+        box-shadow: 0px 5px 5px darken($primary-background-color, 15%);
+
+        &::before{
+            display: flex;
+            @include center-content;
+            counter-increment: listCounter 1;
+            content: counter(listCounter) " ";
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            color: $primary-background-color;
+            background-color: $primary-color;
+            position: absolute;
+            left: -10px;
+        };
+
+        i{
+            margin-right: 25px;
+            font-size: 20px;
+            color: $secondary-text-color;
+        }
+    }
+}
+
+.restaurants{
+    background-color: $secondary-background-color;
+}

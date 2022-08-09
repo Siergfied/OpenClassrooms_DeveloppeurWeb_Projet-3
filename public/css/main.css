@@ -15,6 +15,9 @@ p {
 a {
   text-decoration: none;
 }
+a:visited {
+  color: #000000;
+}
 
 h1 {
   font-weight: 400;
@@ -23,6 +26,8 @@ h1 {
 
 h2 {
   font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ol {
@@ -57,10 +62,59 @@ ol {
   border-radius: 30px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .card {
   display: flex;
-  border-radius: 20px;
+  flex-direction: column;
+  position: relative;
+  background-color: #FFFFFF;
   box-shadow: 0px 5px 5px #d9d9d9;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card__image {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__badge {
+  position: absolute;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  top: 1rem;
+  right: 0.75rem;
+  background-color: #99E2D0;
+  color: #278870;
+  font-size: 14px;
+  font-weight: 500;
+}
+.card__content {
+  display: flex;
+  padding: 1rem;
+  border: 5px solid green;
+  position: relative;
+}
+.card__text {
+  border: 5px solid orange;
+  flex: 1;
+}
+.card__button {
+  display: flex;
+  height: 55px;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 5px solid blue;
 }
 
 /*Button*/
@@ -74,16 +128,17 @@ header, body {
   display: flex;
   width: 100%;
   position: fixed;
+  z-index: 1;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   background-color: #FFFFFF;
   box-shadow: 0px 3px 3px #cccccc;
 }
 
 main {
-  padding-top: 64px;
+  padding-top: 60px;
 }
 
 section {
@@ -91,8 +146,37 @@ section {
   flex-direction: column;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.location {
+  flex-direction: row;
+  background-color: #e6e6e6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+}
+.location__icon {
+  margin-right: 5%;
+  font-size: 18px;
+}
+.location__text {
+  font-weight: 500;
+}
+
+.explore {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.explore h2 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.explore p {
+  color: #666666;
 }
 
 .fonctionnement__list {
@@ -100,6 +184,7 @@ section {
   padding: 0;
   list-style: none;
   counter-reset: listCounter;
+  width: 100%;
 }
 .fonctionnement__step {
   display: flex;
@@ -112,6 +197,8 @@ section {
   background-color: #f2f2f2;
   font-size: 16px;
   font-weight: 500;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px #d9d9d9;
 }
 .fonctionnement__step::before {
   display: flex;
@@ -130,31 +217,13 @@ section {
 .fonctionnement__step i {
   margin-right: 25px;
   font-size: 20px;
+  color: #666666;
 }
 
-.location {
-  flex-direction: row;
-  background-color: #e6e6e6;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  justify-content: center;
-  align-items: center;
-}
-.location__icon {
-  margin-right: 5%;
-  font-size: 18px;
-}
-.location__text {
-  font-weight: 500;
-}
-
-.explore {
-  text-align: center;
+.restaurants {
   background-color: #f2f2f2;
 }
-.explore h2 {
-  margin-left: 10%;
-  margin-right: 10%;
-} /*Page-specific styles
+
+/*Page-specific styles
 home
 *//*# sourceMappingURL=main.css.map */
