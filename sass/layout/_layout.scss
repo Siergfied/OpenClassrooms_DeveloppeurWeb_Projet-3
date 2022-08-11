@@ -10,7 +10,7 @@ header,body{
     position: fixed;
     z-index: 1;
     @include center-content;
-    @include padding-vertical(8px);
+    padding: 8px 0;
     background-color: $primary-background-color;
     box-shadow: 0px 3px 3px darken($primary-background-color, 20%);
 }
@@ -22,6 +22,40 @@ main{
 section{
     display: flex;
     flex-direction: column;
-    @include padding-horizontal(5%);
-    @include padding-vertical(35px);
+    padding: 35px 5%;
+}
+
+.footer{
+    background-color: darken($primary-background-color, 80%);
+    color: $primary-background-color;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    &__logo{
+        margin: 10px 0;
+        font-size: 18px;
+    };
+
+    &__list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &__item{
+            margin: 8px 0;
+            font-size: 16px;
+            font-weight: 400px;
+            i{
+                display: inline-flex;
+                font-size: 12px;
+                width: 10px;
+                margin-right: 10px;
+            }
+            a:link{
+                color: inherit;
+            }
+        }
+    }
 }

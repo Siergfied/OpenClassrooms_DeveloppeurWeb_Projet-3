@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: #000000;
+  color: inherit;
 }
 
 h1 {
@@ -26,8 +26,7 @@ h1 {
 
 h2 {
   font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 ol {
@@ -40,26 +39,52 @@ ol {
 
 .button {
   display: flex;
-  font-size: 16px;
-  box-shadow: 0px 5px 5px #b3b3b3;
 }
 .button:hover {
   cursor: pointer;
 }
-
-.button-primary {
+.button--primary {
   color: white;
-  display: flex;
+  font-size: 16px;
   width: 67%;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  margin: 25px auto;
+  padding: 15px 0;
   border-radius: 30px;
+  box-shadow: 0px 5px 5px #b3b3b3;
+  background-color: #9356DC;
+  background-image: linear-gradient(150deg, #FF79DA, rgba(255, 255, 255, 0));
+  transition: background-color 1s;
+}
+.button--primary:hover {
+  background-color: #bc95e9;
+  box-shadow: 0px 5px 10px #8c8c8c;
+}
+.button--primary:active {
+  transform: translateY(1px);
+}
+.button--like {
+  font-size: 30px;
+  position: absolute;
+}
+.button--like--border {
+  color: #666666;
+}
+.button--like--border:hover {
+  opacity: 0;
+}
+.button--like--background {
+  background: linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.button--like--background:hover {
+  opacity: 1;
+  transition: 500ms;
 }
 
 .container {
@@ -72,11 +97,13 @@ ol {
   flex-direction: column;
   position: relative;
   background-color: #FFFFFF;
-  box-shadow: 0px 5px 5px #d9d9d9;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
+  box-shadow: 0px 0px 10px #d9d9d9;
+  margin: 2.5% 0;
   border-radius: 15px;
   overflow: hidden;
+}
+.card:active {
+  box-shadow: 0px 0px 10px #9356DC;
 }
 .card__image {
   width: 100%;
@@ -86,10 +113,7 @@ ol {
 }
 .card__badge {
   position: absolute;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 6px 12px;
   top: 15px;
   right: 15px;
   background-color: #99E2D0;
@@ -100,7 +124,7 @@ ol {
 .card__content {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 10px 15px;
   position: relative;
 }
 .card__text {
@@ -108,16 +132,13 @@ ol {
 }
 .card__text p {
   color: #666666;
-  margin-top: 5px;
 }
 .card__button {
   display: flex;
-  height: 50px;
-  width: 50px;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  font-size: 26px;
+  height: 50px;
+  width: 50px;
 }
 
 /*Button*/
@@ -134,8 +155,7 @@ header, body {
   z-index: 1;
   justify-content: center;
   align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 0;
   background-color: #FFFFFF;
   box-shadow: 0px 3px 3px #cccccc;
 }
@@ -147,17 +167,46 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding: 35px 5%;
+}
+
+.footer {
+  background-color: #333333;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.footer__logo {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer__list__item {
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 400px;
+}
+.footer__list__item i {
+  display: inline-flex;
+  font-size: 12px;
+  width: 10px;
+  margin-right: 10px;
+}
+.footer__list__item a:link {
+  color: inherit;
 }
 
 .location {
   flex-direction: row;
   background-color: #e6e6e6;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 0;
   justify-content: center;
   align-items: center;
   color: #666666;
@@ -174,10 +223,6 @@ section {
   text-align: center;
   background-color: #f2f2f2;
 }
-.explore h2 {
-  margin-left: 10%;
-  margin-right: 10%;
-}
 .explore p {
   color: #666666;
 }
@@ -193,8 +238,7 @@ section {
   display: flex;
   position: relative;
   padding: 25px;
-  margin-top: 8%;
-  margin-bottom: 8%;
+  margin: 8% 0;
   align-items: center;
   margin-left: 10px;
   background-color: #f2f2f2;
@@ -223,9 +267,16 @@ section {
   font-size: 20px;
   color: #666666;
 }
+.fonctionnement__step:hover {
+  background-color: #f2eafb;
+}
+.fonctionnement__step:hover i {
+  color: #9356DC;
+}
 
 .restaurants {
   background-color: #f2f2f2;
+  padding-bottom: 60px;
 }
 
 /*Page-specific styles

@@ -14,7 +14,7 @@ p{
 a{
     text-decoration: none;
     &:visited{
-        color: $primary-text-color;
+        color: inherit;
     }
 }
 
@@ -25,7 +25,7 @@ h1{
 
 h2{
     font-weight: 700;
-    @include margin-vertical(10px);
+    margin: 10px 0;
 }
 
 ol{

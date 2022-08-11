@@ -1,7 +1,7 @@
 .location{
     flex-direction: row;
     background-color: $tertiary-background-color;
-    @include padding-vertical(15px);
+    padding: 15px 0;
     @include center-content;
     color: $secondary-text-color;
     &__icon{
@@ -16,9 +16,6 @@
 .explore{
     text-align: center;
     background-color: $secondary-background-color;
-    h2{
-        @include margin-horizontal(10%);
-    };
     p{
         color: $secondary-text-color;
     }
@@ -36,7 +33,7 @@
         display: flex;
         position: relative;
         padding: 25px;
-        @include margin-vertical(8%);
+        margin: 8% 0;
         align-items: center;
         margin-left: 10px;
         background-color: $secondary-background-color;
@@ -65,9 +62,17 @@
             font-size: 20px;
             color: $secondary-text-color;
         }
+
+        &:hover{
+            background-color: lighten($primary-color,35%);
+            i{
+                color: $primary-color;
+            }
+        }
     }
 }
 
 .restaurants{
     background-color: $secondary-background-color;
+    padding-bottom: 60px;
 }

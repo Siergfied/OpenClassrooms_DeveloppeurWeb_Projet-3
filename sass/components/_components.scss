@@ -4,23 +4,57 @@
 
 .button{
     display: flex;
-    font-size: 16px;
-    box-shadow: 0px 5px 5px darken($primary-background-color, 30%);
+
     &:hover{
         cursor: pointer;
-    }
-}
+    };
 
-.button-primary{
-    color: white;
-    display: flex;
-    width: 67%;
-    margin: 0 auto;
-    @include center-content;
-    @include margin-vertical(25px);
-    @include padding-vertical(15px);
-    background: linear-gradient(0deg,$primary-color,$secondary-color);
-    border-radius: 30px;
+    &--primary{
+        color: white;
+        font-size: 16px;
+        width: 67%;
+        margin: 0 auto;
+        @include center-content;
+        margin: 25px auto;
+        padding: 15px 0;
+        border-radius: 30px;
+        box-shadow: 0px 5px 5px darken($primary-background-color, 30%);
+        background-color: $primary-color;
+        background-image: linear-gradient( 150deg,$secondary-color, rgba(255,255,255,0));
+        transition: background-color 1s;
+    
+        &:hover{
+            background-color: lighten($primary-color,15%);
+            box-shadow: 0px 5px 10px darken($primary-background-color, 45%);
+        };
+        &:active{
+            transform: translateY(1px);
+        };
+    };
+
+    &--like{
+        font-size: 30px;
+        position: absolute;
+
+        &--border{
+            color: $secondary-text-color;
+            &:hover{
+                opacity: 0;
+            }
+        };
+
+        &--background{
+            background: linear-gradient(0deg,$secondary-color,$primary-color);
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+
+            &:hover{
+                opacity: 1;
+                transition: 500ms;
+            }
+        }
+    };
 }
 
 .container{
@@ -33,10 +67,14 @@
     flex-direction: column;
     position: relative;
     background-color: $primary-background-color;
-    box-shadow: 0px 5px 5px darken($primary-background-color, 15%);
-    @include margin-vertical(2.5%);
+    box-shadow: 0px 0px 10px darken($primary-background-color, 15%);
+    margin: 2.5% 0;
     border-radius: 15px;
     overflow: hidden;
+
+    &:active{
+        box-shadow: 0px 0px 10px $primary-color;
+    }
 
     &__image{
         width: 100%;
@@ -46,8 +84,7 @@
 
     &__badge{
         position: absolute;
-        @include padding-vertical(6px);
-        @include padding-horizontal(12px);
+        padding: 6px 12px;
         top: 15px;
         right: 15px;
         background-color: $tertiary-color;
@@ -59,7 +96,7 @@
     &__content{
         display: flex;
         align-items: center;
-        padding: 15px;
+        padding: 10px 15px;
         position: relative;
     };
     
@@ -67,16 +104,13 @@
         flex-grow: 1;
         p{
             color: $secondary-text-color;
-            margin-top: 5px;
         }
     };
 
     &__button{
         display: flex;
+        @include center-content;
         height: 50px;
         width: 50px;
-        @include center-content;
-        padding: 0;
-        font-size: 26px;
     };
 }

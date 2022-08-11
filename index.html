@@ -22,7 +22,7 @@
             <section class="explore" id="explore">
                 <h2 class="section__title">Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <a class="button button-primary">Explorer nos restaurants</a>
+                <a class="button button--primary">Explorer nos restaurants</a>
             </section>
 
             <section class="fonctionnement" id="fonctionnement">
@@ -48,7 +48,7 @@
             <section class="restaurants" id="restaurants">
                 <h2 class="section__title">Restaurants</h2>
                 <div class="container">
-                    <a class="card" href="#">
+                    <a class="card" href="./La palette du goût.html">
                         <img class="card__image" src="./public/image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                         <span class="card__badge">Nouveau</span>
                         <div class="card__content">
@@ -57,7 +57,8 @@
                                 <p>Ménilmontant</p>
                             </div>
                             <div class="card__button">
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-heart button button--like button--like--border"></i>
+                                <i class="fa-solid fa-heart button button--like button--like--background"></i>
                             </div>
                         </div>
                     </a>
@@ -71,7 +72,7 @@
                                 <p>Charonne</p>
                             </div>
                             <div class="card__button">
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-heart button button--like"></i>
                             </div>
                         </div>
                     </a>
@@ -84,7 +85,7 @@
                                 <p>Cité Rouge</p>
                             </div>
                             <div class="card__button">
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-heart button button--like"></i>
                             </div>
                         </div>
                     </a>
@@ -97,7 +98,7 @@
                                 <p>Folie-Méricourt</p>
                             </div>
                             <div class="card__button">
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-heart button button--like"></i>
                             </div>
                         </div>
                     </a>
@@ -105,13 +106,21 @@
             </section>
         </main>
 
-        <footer>
-            <span class="logo">ohmyfood</span>
-            <ul>
-                <li><i class="fa-solid fa-utensils"></i>Proposez un restaurant</li>
-                <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-                <li>Mention légales</li>
-                <li>Contact</li>
+        <footer class="footer">
+            <span class="logo footer__logo">ohmyfood</span>
+            <ul class="footer__list">
+                <li class="footer__list__item">
+                    <a href="#"><i class="fa-solid fa-utensils"></i> Proposez un restaurant</a>
+                </li>
+                <li  class="footer__list__item">
+                    <a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a>
+                </li>
+                <li class="footer__list__item">
+                    <a href="#">Mention légales</a>
+                </li>
+                <li class="footer__list__item">
+                    <a href="mailto:contact@ohmyfood.com">Contact</a>
+                </li>
             </ul>
         </footer>
     </body>
