@@ -141,7 +141,76 @@ ol {
   width: 50px;
 }
 
-/*Button*/
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  z-index: 10;
+  font-size: 48px;
+  -webkit-animation: loader 1.5s both;
+          animation: loader 1.5s both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.loader__container {
+  display: flex;
+  position: relative;
+}
+.loader__item {
+  display: flex;
+  color: #9356DC;
+}
+.loader__item::after {
+  content: "ohmyfood";
+  position: absolute;
+  left: 0;
+  color: black;
+  overflow: hidden;
+  -webkit-animation: loaderAnimation 2.5s ease-in-out;
+          animation: loaderAnimation 2.5s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes loaderAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loaderAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
 header, body {
   margin: 0;
   padding: 0;
@@ -277,8 +346,4 @@ section {
 .restaurants {
   background-color: #f2f2f2;
   padding-bottom: 60px;
-}
-
-/*Page-specific styles
-home
-*//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
