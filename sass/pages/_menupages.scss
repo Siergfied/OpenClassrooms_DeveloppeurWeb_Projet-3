@@ -1,0 +1,31 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    &__image{
+        width: 105%;
+    }
+    &__container{
+        background-color: $secondary-background-color;
+        border-radius: 40px 40px 0 0;
+        overflow: hidden;
+        position: absolute;
+        margin-top: 215px;
+    }
+    &__header{
+        display: flex;
+        padding: 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        display: flex;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    &__like{
+        display: flex;
+        width: 44px;
+        height: 44px;
+        @include center-content;
+    }
+}

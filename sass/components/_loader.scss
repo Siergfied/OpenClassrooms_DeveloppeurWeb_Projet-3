@@ -17,7 +17,9 @@
 
     &__item{
         display: flex;
-        color: $primary-color;
+        background: linear-gradient(0deg,$secondary-color,$primary-color);
+        background-clip: text;
+        color: transparent;
         &::after{
             content: 'ohmyfood';
             position: absolute;
@@ -44,9 +46,13 @@
         opacity: 1;
 
     }
+    75%{
+        opacity: 0.1;
+    }
     100%{
         opacity: 0;
-        z-index: -100;
+        visibility: hidden;
+        display: none;
     }
 }
   

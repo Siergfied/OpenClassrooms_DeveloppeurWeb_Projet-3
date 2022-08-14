@@ -15,9 +15,6 @@ p {
 a {
   text-decoration: none;
 }
-a:visited {
-  color: inherit;
-}
 
 h1 {
   font-weight: 400;
@@ -40,11 +37,14 @@ ol {
 .button {
   display: flex;
 }
+.button a {
+  color: #FFFFFF;
+}
 .button:hover {
   cursor: pointer;
 }
 .button--primary {
-  color: white;
+  color: #FFFFFF;
   font-size: 16px;
   width: 67%;
   margin: 0 auto;
@@ -130,6 +130,9 @@ ol {
 .card__text {
   flex-grow: 1;
 }
+.card__text h3 {
+  color: #000000;
+}
 .card__text p {
   color: #666666;
 }
@@ -139,6 +142,15 @@ ol {
   align-items: center;
   height: 50px;
   width: 50px;
+}
+
+.returnArrow {
+  display: flex;
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .loader {
@@ -162,7 +174,10 @@ ol {
 }
 .loader__item {
   display: flex;
-  color: #9356DC;
+  background: linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 .loader__item::after {
   content: "ohmyfood";
@@ -197,18 +212,26 @@ ol {
   0% {
     opacity: 1;
   }
+  75% {
+    opacity: 0.1;
+  }
   100% {
     opacity: 0;
-    z-index: -100;
+    visibility: hidden;
+    display: none;
   }
 }
 @keyframes loader {
   0% {
     opacity: 1;
   }
+  75% {
+    opacity: 0.1;
+  }
   100% {
     opacity: 0;
-    z-index: -100;
+    visibility: hidden;
+    display: none;
   }
 }
 header, body {
@@ -233,10 +256,15 @@ main {
   padding-top: 60px;
 }
 
-section {
+.section {
   display: flex;
   flex-direction: column;
+}
+.section--homepage {
   padding: 35px 5%;
+}
+.section--menupages {
+  padding: 0 5%;
 }
 
 .footer {
@@ -251,16 +279,18 @@ section {
 .footer__logo {
   margin: 10px 0;
   font-size: 18px;
+  color: inherit;
 }
 .footer__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  color: inherit;
 }
 .footer__list__item {
   margin: 8px 0;
   font-size: 16px;
-  font-weight: 400px;
+  color: inherit;
 }
 .footer__list__item i {
   display: inline-flex;
@@ -268,11 +298,12 @@ section {
   width: 10px;
   margin-right: 10px;
 }
-.footer__list__item a:link {
+.footer__list__item a {
   color: inherit;
 }
 
 .location {
+  display: flex;
   flex-direction: row;
   background-color: #e6e6e6;
   padding: 15px 0;
@@ -346,4 +377,37 @@ section {
 .restaurants {
   background-color: #f2f2f2;
   padding-bottom: 60px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu__image {
+  width: 105%;
+}
+.menu__container {
+  background-color: #f2f2f2;
+  border-radius: 40px 40px 0 0;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 215px;
+}
+.menu__header {
+  display: flex;
+  padding: 5%;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__title {
+  display: flex;
+  font-weight: 400;
+  font-size: 30px;
+}
+.menu__like {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

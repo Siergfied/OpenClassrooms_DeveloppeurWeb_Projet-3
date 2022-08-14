@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap');
 
-// 1. Abstracts 
-@import "./abstracts/variable";
-@import "./abstracts/mixin";
+// 1. Utils 
+@import "./utils/variable";
+@import "./utils/mixin";
 
 // 2. Base
 @import "./base/typography";
@@ -17,3 +17,4 @@
 
 // 5. Pages
 @import "./pages/homepage";
+@import "./pages/menupages";

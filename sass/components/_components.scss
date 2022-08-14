@@ -5,12 +5,16 @@
 .button{
     display: flex;
 
+    a{
+        color: $primary-background-color;
+    }
+
     &:hover{
         cursor: pointer;
     };
 
     &--primary{
-        color: white;
+        color: $primary-background-color;
         font-size: 16px;
         width: 67%;
         margin: 0 auto;
@@ -102,6 +106,9 @@
     
     &__text{
         flex-grow: 1;
+        h3{
+            color: $primary-text-color;
+        }
         p{
             color: $secondary-text-color;
         }
@@ -113,4 +120,13 @@
         height: 50px;
         width: 50px;
     };
+}
+
+.returnArrow{
+    display: flex;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
 }
