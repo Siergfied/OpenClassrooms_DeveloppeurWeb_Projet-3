@@ -1,7 +1,8 @@
-header,body{
+header,body,footer{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -38,6 +39,7 @@ main{
     padding: 0 5%;
     padding-top: 10px;
     padding-bottom: 20px;
+    position: relative;
 
     &__logo{
         margin: 10px 0;

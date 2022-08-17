@@ -21,11 +21,6 @@ h1 {
   font-size: 30px;
 }
 
-h2 {
-  font-weight: 700;
-  margin: 10px 0;
-}
-
 ol {
   font-size: 14px;
 }
@@ -234,10 +229,11 @@ ol {
     display: none;
   }
 }
-header, body {
+header, body, footer {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -275,6 +271,7 @@ main {
   padding: 0 5%;
   padding-top: 10px;
   padding-bottom: 20px;
+  position: relative;
 }
 .footer__logo {
   margin: 10px 0;
@@ -379,9 +376,15 @@ main {
   padding-bottom: 60px;
 }
 
+.section__title {
+  font-weight: 700;
+  margin: 10px 0;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .menu__image {
   width: 105%;
@@ -389,9 +392,6 @@ main {
 .menu__container {
   background-color: #f2f2f2;
   border-radius: 40px 40px 0 0;
-  overflow: hidden;
-  position: absolute;
-  margin-top: 215px;
 }
 .menu__header {
   display: flex;
@@ -410,4 +410,61 @@ main {
   height: 44px;
   justify-content: center;
   align-items: center;
+}
+.menu__section {
+  list-style: none;
+  padding: 0;
+}
+.menu__section__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  color: #666666;
+  position: relative;
+  padding-bottom: 8px;
+}
+.menu__section__title::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.menu__item {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid red;
+  position: relative;
+}
+.menu__item__description {
+  flex: 1 1 50%;
+  border: 5px solid blue;
+  overflow: hidden;
+  margin: 2.5%;
+}
+.menu__item__title {
+  margin: 0;
+  font-size: 18px;
+  flex-wrap: wrap;
+}
+.menu__item__text {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: inherit;
+  white-space: nowrap;
+}
+.menu__item__price {
+  border: 5px solid yellow;
+  width: 10%;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 2.5%;
+  align-self: flex-end;
+}
+.menu__item__confirmation {
+  display: none;
+  width: 15%;
+  border: 5px solid green;
 }/*# sourceMappingURL=main.css.map */

@@ -1,31 +1,98 @@
 .menu{
     display: flex;
     flex-direction: column;
+    position: relative;
+
     &__image{
         width: 105%;
     }
+
     &__container{
         background-color: $secondary-background-color;
         border-radius: 40px 40px 0 0;
-        overflow: hidden;
-        position: absolute;
-        margin-top: 215px;
     }
+
     &__header{
         display: flex;
         padding: 5%;
         justify-content: space-between;
         align-items: center;
     }
+
     &__title{
         display: flex;
         font-weight: 400;
         font-size: 30px;
     }
+
     &__like{
         display: flex;
         width: 44px;
         height: 44px;
         @include center-content;
+    }
+
+    &__section{
+        list-style: none;
+        padding: 0;
+
+        &__title{
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 16px;
+            color: $secondary-text-color;
+            position: relative;
+            padding-bottom: 8px;
+
+            &::after{
+                content: "";
+                width: 40px;
+                height: 4px;
+                background-color: $tertiary-color;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        border: 5px solid red;
+        position: relative;
+        &__description{
+            flex: 1 1 50%;
+            border: 5px solid blue;
+            overflow: hidden;
+            margin: 2.5%;
+        }
+        &__title{
+            margin: 0;
+            font-size: 18px;
+            flex-wrap: wrap;
+        }
+
+        &__text{
+            font-size: 14px;
+            text-overflow: ellipsis;
+            overflow: inherit;
+            white-space: nowrap;
+        }
+
+        &__price{
+            border: 5px solid yellow;
+            width: 10%;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 2.5%;
+            align-self: flex-end;
+        }
+
+        &__confirmation{
+            display: none;
+            width: 15%;
+            border: 5px solid green;
+        }
     }
 }
