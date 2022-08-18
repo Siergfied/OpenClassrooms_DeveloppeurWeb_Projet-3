@@ -32,6 +32,10 @@ main{
     }
     &--menupages{
         padding: 0 5%;
+        flex: 1 1 20%;
+        @media(min-width: 1024px) {
+            padding: 2.5%;
+        }
     }
 }
 
@@ -55,7 +59,10 @@ main{
         margin: 0;
         padding: 0;
         color: inherit;
+        display: flex;
+        flex-direction: column;
         &__item{
+            display: flex;
             margin: 8px 0;
             font-size: 16px;
             color: inherit;

@@ -26,18 +26,24 @@
 }
 
 .fonctionnement{
+    
     &__list{
         margin: 0;
         padding: 0;
         list-style: none;
         counter-reset: listCounter;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        @media(min-width: 1024px) {
+            flex-direction: row;
+        }
     }
     &__step{
         display: flex;
         position: relative;
         padding: 25px;
-        margin: 8% 0;
+        margin: 4% 0;
         align-items: center;
         margin-left: 10px;
         background-color: $secondary-background-color;
@@ -45,6 +51,10 @@
         font-weight: 500;
         border-radius: 20px;
         box-shadow: 0px 5px 5px darken($primary-background-color, 15%);
+        @media(min-width: 1024px) {
+            flex: 1 1 33%;
+            margin: 2.5%;
+        }
 
         &::before{
             display: flex;

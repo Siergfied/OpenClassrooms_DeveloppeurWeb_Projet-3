@@ -96,6 +96,12 @@ ol {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 .card {
   display: flex;
@@ -107,6 +113,12 @@ ol {
   border-radius: 15px;
   overflow: hidden;
 }
+@media (min-width: 1024px) {
+  .card {
+    flex: 1 1 40%;
+    margin: 2.5%;
+  }
+}
 .card:active {
   box-shadow: 0px 0px 10px #9356DC;
 }
@@ -115,6 +127,11 @@ ol {
   height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .card__image {
+    height: 240px;
+  }
 }
 .card__badge {
   position: absolute;
@@ -274,6 +291,12 @@ main {
 }
 .section--menupages {
   padding: 0 5%;
+  flex: 1 1 20%;
+}
+@media (min-width: 1024px) {
+  .section--menupages {
+    padding: 2.5%;
+  }
 }
 
 .footer {
@@ -295,8 +318,11 @@ main {
   margin: 0;
   padding: 0;
   color: inherit;
+  display: flex;
+  flex-direction: column;
 }
 .footer__list__item {
+  display: flex;
   margin: 8px 0;
   font-size: 16px;
   color: inherit;
@@ -348,12 +374,19 @@ main {
   list-style: none;
   counter-reset: listCounter;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .fonctionnement__list {
+    flex-direction: row;
+  }
 }
 .fonctionnement__step {
   display: flex;
   position: relative;
   padding: 25px;
-  margin: 8% 0;
+  margin: 4% 0;
   align-items: center;
   margin-left: 10px;
   background-color: #f2f2f2;
@@ -361,6 +394,12 @@ main {
   font-weight: 500;
   border-radius: 20px;
   box-shadow: 0px 5px 5px #d9d9d9;
+}
+@media (min-width: 1024px) {
+  .fonctionnement__step {
+    flex: 1 1 33%;
+    margin: 2.5%;
+  }
 }
 .fonctionnement__step::before {
   display: flex;
@@ -416,11 +455,21 @@ main {
   margin-top: 220px;
   padding-top: 10px;
 }
+@media (min-width: 1024px) {
+  .menu__container {
+    margin-top: 330px;
+  }
+}
 .menu__header {
   display: flex;
   padding: 5%;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .menu__header {
+    padding: 2.5%;
+  }
 }
 .menu__title {
   display: flex;
@@ -528,6 +577,11 @@ main {
   overflow: hidden;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .image__container {
+    height: 600px;
+  }
 }
 
 .apparition__delay-1 {
